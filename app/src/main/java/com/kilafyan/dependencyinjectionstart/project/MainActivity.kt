@@ -1,7 +1,8 @@
-package com.kilafyan.dependencyinjectionstart
+package com.kilafyan.dependencyinjectionstart.project
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.kilafyan.dependencyinjectionstart.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
