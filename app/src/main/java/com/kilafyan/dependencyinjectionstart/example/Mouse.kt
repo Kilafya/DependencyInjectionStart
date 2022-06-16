@@ -1,4 +1,6 @@
 package com.kilafyan.dependencyinjectionstart.example
 
-class Mouse {
+import javax.inject.Inject
+
+class Mouse @Inject constructor() {
 }

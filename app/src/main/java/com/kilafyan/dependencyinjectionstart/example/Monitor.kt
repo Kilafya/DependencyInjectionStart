@@ -1,4 +1,6 @@
 package com.kilafyan.dependencyinjectionstart.example
 
-class Monitor {
+import javax.inject.Inject
+
+class Monitor @Inject constructor() {
 }

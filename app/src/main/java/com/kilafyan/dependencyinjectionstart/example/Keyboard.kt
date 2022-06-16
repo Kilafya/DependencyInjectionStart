@@ -1,4 +1,6 @@
 package com.kilafyan.dependencyinjectionstart.example
 
-class Keyboard {
+import javax.inject.Inject
+
+class Keyboard @Inject constructor() {
 }
