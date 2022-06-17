@@ -1,11 +1,24 @@
 package com.example.dependencyinjectionstart.example2.data.di
 
+import android.content.Context
 import com.example.dependencyinjectionstart.example2.presentation.MainActivity
-import com.kilafyan.dependencyinjectionstart.example2.data.di.ContextModule
+import dagger.BindsInstance
 import dagger.Component
 
-@Component(modules = [DataModule::class, DomainModule::class, ContextModule::class])
+@Component(modules = [DataModule::class, DomainModule::class])
 interface ApplicationComponent {
 
     fun inject(activity: MainActivity)
+
+    @Component.Builder
+    interface ApplicationComponentBuilder {
+
+        @BindsInstance
+        fun context(context: Context): ApplicationComponentBuilder
+
+        @BindsInstance
+        fun currentTime(time: Long): ApplicationComponentBuilder
+
+        fun build(): ApplicationComponent
+    }
 }

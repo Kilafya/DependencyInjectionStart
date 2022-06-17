@@ -1,12 +1,17 @@
 package com.example.dependencyinjectionstart.example2.data.network
 
+import android.content.Context
 import android.util.Log
+import com.kilafyan.dependencyinjectionstart.R
 import javax.inject.Inject
 
-class ExampleApiService @Inject constructor() {
+class ExampleApiService @Inject constructor(
+    private val context: Context,
+    private val currentTime: Long
+) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService")
+        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} $currentTime")
     }
 
     companion object {
