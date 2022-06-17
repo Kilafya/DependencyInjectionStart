@@ -4,14 +4,19 @@ import android.content.Context
 import android.util.Log
 import com.kilafyan.dependencyinjectionstart.R
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class ExampleApiService @Inject constructor(
     private val context: Context,
     private val currentTime: Long
 ) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService ${context.getString(R.string.app_name)} $currentTime")
+        Log.d(
+            LOG_TAG,
+            "ExampleApiService ${context.getString(R.string.app_name)} $currentTime $this"
+        )
     }
 
     companion object {
