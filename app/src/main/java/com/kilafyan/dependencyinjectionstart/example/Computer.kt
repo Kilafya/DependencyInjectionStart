@@ -1,6 +1,8 @@
 package com.kilafyan.dependencyinjectionstart.example
 
-class Computer(
+import javax.inject.Inject
+
+class Computer (
     val monitor: Monitor,
     val computerTower: ComputerTower,
     val keyboard: Keyboard,
